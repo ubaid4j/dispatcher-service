@@ -24,7 +24,7 @@ spec:
             - name: SPRING_RABBITMQ_HOST
               value: polar-rabbitmq
             - name: SPRING_RABBITMQ_PORT
-              value: "56720"
+              value: "5672"
           lifecycle:
             preStop:
               exec:
