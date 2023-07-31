@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: dispatcher-service
+  devtools:
+    livereload:
+      port: 51301
   cloud:
     function:
       definition: pack|label
@@ -19,3 +22,7 @@ spring:
     username: user
     password: password
     connection-timeout: 5s
+
+logging:
+  level:
+    dev.ubaid: TRACE
