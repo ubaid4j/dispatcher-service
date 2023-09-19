@@ -1,3 +1,8 @@
 info:
   system: Polar BookShop
   profile: k8s default
+
+spring:
+  rabbitmq:
+    host: polar-rabbitmq
+    port: 5672

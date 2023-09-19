@@ -36,12 +36,14 @@ spec:
               port: 50301
             initialDelaySeconds: 5
             periodSeconds: 15
-          env:
-            - name: SPRING_RABBITMQ_HOST
-              value: polar-rabbitmq
-            - name: SPRING_RABBITMQ_PORT
-              value: "5672"
           lifecycle:
             preStop:
               exec:
                 command: ["sh", "-c", "sleep 5"]
+          volumeMounts:
+            - mountPath: /workspace/config
+              name: dispatcher-service-volume
+      volumes:
+        - name: dispatcher-service-volume
+          configMap:
+            name: dispatcher-config
